@@ -1,9 +1,11 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+# frozen_string_literal: true
+
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
 class AboutOpenClasses < Neo::Koan
   class Dog
     def bark
-      "WOOF"
+      'WOOF'
     end
   end
 
@@ -17,7 +19,7 @@ class AboutOpenClasses < Neo::Koan
   # Open the existing Dog class and add a new method.
   class Dog
     def wag
-      "HAPPY"
+      'HAPPY'
     end
   end
 
@@ -30,9 +32,7 @@ class AboutOpenClasses < Neo::Koan
   # ------------------------------------------------------------------
 
   class ::Integer
-    def even?
-      (self % 2) == 0
-    end
+    delegate :even?, to: self
   end
 
   def test_even_existing_built_in_classes_can_be_reopened

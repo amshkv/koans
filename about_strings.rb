@@ -179,7 +179,7 @@ It was the worst of times.
 
   def test_strings_can_be_split_with_different_patterns
     string = 'the:rain:in:spain'
-    words = string.split(/:/)
+    words = string.split(':')
     assert_equal %w[the rain in spain], words
 
     # NOTE: Patterns are formed from Regular Expressions.  Ruby has a

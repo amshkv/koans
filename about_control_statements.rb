@@ -1,4 +1,4 @@
-# frozen-string-literal: true
+# frozen_string_literal: true
 
 require File.expand_path("#{File.dirname(__FILE__)}/neo")
 # rubocop: disable Metrics/ClassLength
